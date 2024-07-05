@@ -270,7 +270,7 @@ module Elasticsearch
         def index_exists?(options={})
           target_index = options[:index] || self.index_name
 
-          self.client.indices.exists(index: target_index, ignore: 404)
+          self.client.indices.exists(index: target_index)
         end
 
         # Deletes the index with corresponding name
